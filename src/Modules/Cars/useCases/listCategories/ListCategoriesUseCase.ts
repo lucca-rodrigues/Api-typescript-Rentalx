@@ -8,7 +8,6 @@ class ListCategoriesUseCase {
 
     return categories;
   }
-  return
 }
 
 export {ListCategoriesUseCase}
