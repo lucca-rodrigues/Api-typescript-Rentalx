@@ -5,9 +5,7 @@ interface IRequest {
   description: string;
 }
 class CreateCategoryUseCase {
-  constructor (private categoriesRepository: CategoriesRepository) {
-
-  }
+  constructor (private categoriesRepository: CategoriesRepository) {}
 
   execute({ description, name }: IRequest): void {
     const categoryExists = this.categoriesRepository.findByName(name);
