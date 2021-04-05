@@ -1,6 +1,7 @@
 import express from 'express';
 import { router } from './Routes';
 
+import "./Database";
 
 const app = express();
 
