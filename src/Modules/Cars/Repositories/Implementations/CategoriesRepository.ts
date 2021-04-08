@@ -1,4 +1,4 @@
-import { Category } from "../../Model/Category"
+import { Category } from "../../Etities/Category"
 import { ICategoriesRepository, ICreateCategoryDTO } from "../ICategoriesRepository";
 
 class CategoriesRepository implements ICategoriesRepository {
