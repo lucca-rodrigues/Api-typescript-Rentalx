@@ -1,7 +1,6 @@
 import { hash } from 'bcryptjs';
 import { inject, injectable } from 'tsyringe';
 
-import { AppError } from '../../../../errors/AppError';
 import { IUsersRepository } from '../../Repositories/IUserRepository';
 
 interface IRequest {
