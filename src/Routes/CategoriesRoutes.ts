@@ -8,7 +8,8 @@ const categoriesRoutes = Router();
 const categoryRepository = new CategoriesRepository();
 
 categoriesRoutes.get("/", (request, response) => {
-  response.json(categoryRepository);
+  const data = categoryRepository.show();
+  return response.json(data);
 });
 
 categoriesRoutes.post("/", (request, response) => {
