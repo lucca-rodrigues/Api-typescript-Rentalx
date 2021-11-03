@@ -14,13 +14,16 @@ categoriesRoutes.get("/", (request, response) => {
 
 categoriesRoutes.post("/", (request, response) => {
   const { name, description } = request.body;
+  const categoryExists = categoryRepository.findByName(name);
+  if (!categoryExists) {
+    categoryRepository.create({
+      name,
+      description,
+    });
 
-  categoryRepository.create({
-    name,
-    description,
-  });
-
-  return response.status(201).send();
+    return response.status(201).send();
+  }
+  return response.status(400).send({ message: "Categoria já existente!" });
 });
 
 export { categoriesRoutes };
