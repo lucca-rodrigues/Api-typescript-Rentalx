@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { v4 as uuidV4 } from "uuid";
 
+import { Category } from "../../old/src/Modules/Cars/Entities/Category";
 import { CategoryModel } from "../Models/CategoryModel";
 
 const categoriesRoutes = Router();
@@ -14,11 +15,13 @@ categoriesRoutes.get("/categories", (request, response) => {
 categoriesRoutes.post("/categories", (request, response) => {
   const { name, description } = request.body;
 
-  const category: CategoryModel = {
+  const category = new CategoryModel();
+
+  Object.assign(category, {
     name,
     description,
     created_at: new Date(),
-  };
+  });
 
   categories.push(category);
 
