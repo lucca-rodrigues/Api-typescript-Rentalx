@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { ListCategoryUseCase } from "./ListCategoryUseCase";
 
-class ListCategoriesController {
+class ListCategoryController {
   constructor(private listCategoryUseCase: ListCategoryUseCase) {}
   handle(request: Request, response: Response): Response {
     const all = this.listCategoryUseCase.execute();
@@ -10,4 +10,4 @@ class ListCategoriesController {
   }
 }
 
-export { ListCategoriesController };
+export { ListCategoryController };
