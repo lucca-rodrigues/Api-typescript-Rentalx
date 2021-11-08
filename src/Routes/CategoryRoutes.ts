@@ -18,7 +18,7 @@ categoryRoutes.post("/", (request, response) => {
   return createCategoryController.handle(request, response);
 });
 
-categoryRoutes.post("/import", upload.single("file"), (request, response) => {
+categoryRoutes.post("/files", upload.single("file"), (request, response) => {
   const { file } = request;
   console.log(file);
 
