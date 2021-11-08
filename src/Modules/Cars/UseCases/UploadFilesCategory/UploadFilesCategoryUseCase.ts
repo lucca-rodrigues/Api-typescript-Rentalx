@@ -1,7 +1,7 @@
-class ImportCategoryUseCase {
+class UploadFilesCategoryUseCase {
   execute(file: Express.Multer.File): void {
     console.log(file);
   }
 }
 
-export { ImportCategoryUseCase };
+export { UploadFilesCategoryUseCase };
