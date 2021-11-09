@@ -5,6 +5,7 @@
   "username": "docker",
   "password": "ignite",
   "database": "rentalx",
+  "migration": "./src/Database/Migrations/*.ts",
   "cli": {
     "migrationsDir": "./src/Database/Migrations"
   }
