@@ -25,6 +25,7 @@ class UploadFilesCategoryUseCase {
           categories.push({ name, description });
         })
         .on("end", () => {
+          fs.promises.unlink(file.path); // Remove file after read
           resolve(categories);
         })
         .on("error", (err) => reject(err));
