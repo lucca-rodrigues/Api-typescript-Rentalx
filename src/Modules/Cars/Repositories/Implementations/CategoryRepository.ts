@@ -7,18 +7,8 @@ import { getRepository, Repository } from "typeorm";
 class CategoryRepository implements ICategoryRepository {
   private repository: Repository<CategoryModel>;
 
-  private static INSTANCE: CategoryRepository;
-
-  private constructor() {
+  constructor() {
     this.repository = getRepository(CategoryModel);
-  }
-
-  public static getInstance(): CategoryRepository {
-    if (!CategoryRepository.INSTANCE) {
-      CategoryRepository.INSTANCE = new CategoryRepository();
-    }
-
-    return CategoryRepository.INSTANCE;
   }
 
   async create({ name, description }: ICreateCategoryDTO): Promise<void> {
