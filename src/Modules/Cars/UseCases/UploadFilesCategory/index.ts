@@ -2,7 +2,7 @@ import { CategoryRepository } from "../../Repositories/Implementations/CategoryR
 import { UploadFilesCategoryController } from "./UploadFilesCategoryController";
 import { UploadFilesCategoryUseCase } from "./UploadFilesCategoryUseCase";
 
-const categoryRepository = CategoryRepository.getInstance();
+const categoryRepository = null;
 const uploadFilesCategoryUseCase = new UploadFilesCategoryUseCase(
   categoryRepository
 );
