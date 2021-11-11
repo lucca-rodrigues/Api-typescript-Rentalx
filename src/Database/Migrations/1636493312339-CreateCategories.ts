@@ -10,8 +10,8 @@ export class CreateCategories1636493312339 implements MigrationInterface {
             name: "id",
             type: "uuid",
             isPrimary: true,
-            generationStrategy: "uuid",
-            default: "uuid_generate_v4()",
+            // generationStrategy: "uuid",
+            // default: "uuid_generate_v4()",
           },
           {
             name: "name",
@@ -22,7 +22,7 @@ export class CreateCategories1636493312339 implements MigrationInterface {
             type: "varchar",
           },
           {
-            name: "create_at",
+            name: "created_at",
             type: "timestamp",
             default: "now()",
           },
